@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="root"></div>
+
+    <script>
+      root = document.getElementById("root");
+      root.style.width = "100px";
+      root.style.height = "100px";
+      root.style.backgroundColor = "red";
+
+      const dom = [];
+
+      function test(count, tagname, attri, attrivalue, textNode) {
+        for (let i = 0; i < 3; i++) {
+          dom.push(
+            `<${tagname} ${attri} ="${attrivalue} -${
+              i + 1
+            }">${textNode}</${tagname}  >`
+          );
+
+          //dom.push(`<div attri ="test-${i + 1}">피카츄</div>`);
+        }
+      }
+
+      test("", "div", "id", "3", "하이");
+      console.log(dom);
+      root.innerHTML = dom.join();
+
+      // root.innerHTML = test("");
+      // console.log(test("", "div", "id", "3", "하이"));
+
+      // 기본형으로 push
+      // dom.push(`<div id =test-1>피카츄 </div>`);
+      // dom.push(`<div id =test-2>디지몬 </div>`);
+      // dom.push(`<div id =test-3>아구몬 </div>`);
+
+      // " "가없으면 변수나 지정된 값을 넣어줘야함  " "가  없으면 변수!!!
+      // 값을 직접넣는게 =리터럴
+      // dom.push(`<${div -> x 변수지정이 안 됨}>피카츄</${"안녕"}>`);
+    </script>
+  </body>
+</html>

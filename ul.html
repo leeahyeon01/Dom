@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="root"></div>
+
+    <script>
+      const root = document.getElementById("root");
+
+      const dom = [];
+      //  innerHtml 안에 ul넣고 li를 돌림
+      //조건문을 쓰거나
+      //splice ()메소드
+
+      //style 값주기
+
+      // dom.innerHTML = `<${ul}> 1</${ul}>`;
+
+      // dom.push(`<ul>1 </ul>`);
+
+      // dom.push(`<${ul}> 1 </${ul}>`);
+
+      //unshift로 앞에 ul 태그 넣기 , push로 뒤에 /ul 넣기
+      for (let i = 0; i < 5; i++) {
+        dom.push(`<li>hello</li>`);
+      }
+      dom.unshift("<ul>");
+      dom.push("</ul>");
+      console.log(dom.join(""));
+
+      // root.innerHTML = dom.join("");
+    </script>
+  </body>
+</html>

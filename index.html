@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="root"></div>
+
+    <!--  -->
+    <script>
+      const root = document.getElementById("root");
+      console.log("root");
+      root.style.width = "100px";
+      root.style.height = "100px";
+      root.style.backgroundColor = "green";
+
+      console.log(root.style);
+
+      function donguk(tagname, textContent) {
+        return `<${tagname}> ${textContent}</${tagname}>`;
+      }
+
+      console.log(donguk());
+
+      let test =
+        donguk("section", "hello") +
+        donguk("nav", "나는 상호야 ") +
+        donguk("article", "나는 아연이야");
+
+      console.log(test);
+
+      // root.innerHTML = donguk("p", "나는 사실두진이었다.");
+      root.innerHTML = test;
+    </script>
+  </body>
+</html>

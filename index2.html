@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="root"></div>
+
+    <script>
+      const dom = [];
+
+      root = document.getElementById("root");
+      root.style.width = "100px";
+      root.style.height = "100px";
+      root.style.backgroundColor = "cadetblue";
+
+      console.dir(root.style);
+      let digimon = ["피카츄", "디지몬", "야구몬", "꼬부기 "];
+
+      function test(count, tagname, attri) {
+        for (let i = 0; i < 10; i++) {
+          dom.push(
+            `<${tagname} ${attri} ="${attrivalue} -${i + 1}"> ${textnode}> `
+          );
+          // dom.push(`<div attri ="test-${i + 1}">피카츄</div>`);
+        }
+      }
+      // 기본형
+      // dom.push(`<div id ="test1"> 피카츄 </div>`);
+      // dom.push(`<div id ="test2"> 디지몬 </div>`);
+      // dom.push(`<div id ="test3"> 야구몬 </div>`);
+      // dom.push(`<div id ="test4"> 꼬부기 </div>`);
+
+      root.innerHTML = dom.join("");
+
+      console.log(dom);
+
+      root.innerHTML = dom[0];
+    </script>
+  </body>
+</html>
